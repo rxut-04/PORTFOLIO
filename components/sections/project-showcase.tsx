@@ -54,12 +54,12 @@ const ProjectShowcase = () => {
       liveUrl: "https://personal-financeee.netlify.app/",
     },
     {
-      title: "E-Learning Management System",
+      title: "SaaS-BUSINESS-PLATFORM",
       description:
-        "Complete learning management system with course creation, progress tracking, interactive quizzes, and video streaming capabilities.",
-      image: "/placeholder.svg?height=300&width=500",
-      tech: ["Next.js", "Prisma", "Supabase", "Stripe"],
-      liveUrl: "#",
+        "Modern SaaS platform with subscription management, user analytics, and automated billing. Features a comprehensive dashboard for business metrics and customer management.",
+      image: "/saas.png",
+      tech: ["Next.js", "Stripe", "PostgreSQL", "Tailwind CSS"],
+      liveUrl: "https://saas-business.netlify.app/",
     },
     {
       title: "IoT Monitoring Dashboard",
