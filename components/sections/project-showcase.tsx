@@ -46,12 +46,12 @@ const ProjectShowcase = () => {
       liveUrl: "https://startup-community.netlify.app/",
     },
     {
-      title: "Smart Data Visualization",
+      title: "PERSONAL-FINANCE-TRACKER",
       description:
-        "Advanced data visualization platform with interactive charts, custom dashboards, and AI-powered insights for complex datasets.",
-      image: "/placeholder.svg?height=300&width=500",
-      tech: ["D3.js", "Python", "FastAPI", "Redis"],
-      liveUrl: "#",
+        "Comprehensive personal finance management system with expense tracking, budget planning, and financial analytics. Features intuitive dashboards and detailed financial insights.",
+      image: "/personal-finance-project.png",
+      tech: ["React", "Node.js", "MongoDB", "Express"],
+      liveUrl: "https://personal-financeee.netlify.app/",
     },
     {
       title: "E-Learning Management System",
