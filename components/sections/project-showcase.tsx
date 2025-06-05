@@ -49,7 +49,7 @@ const ProjectShowcase = () => {
       title: "PERSONAL-FINANCE-TRACKER",
       description:
         "Comprehensive personal finance management system with expense tracking, budget planning, and financial analytics. Features intuitive dashboards and detailed financial insights.",
-      image: "/personal-finance-project.png",
+      image: "/cardlogo.png",
       tech: ["React", "Node.js", "MongoDB", "Express"],
       liveUrl: "https://personal-financeee.netlify.app/",
     },
