@@ -41,9 +41,9 @@ const ProjectShowcase = () => {
       title: "STARTUP-COMMUNITY-HUB",
       description:
         "Comprehensive platform connecting startups with investors. Features company registration, investor dashboards, and admin management tools for the startup ecosystem.",
-      image: "/startup-community-project.png",
+      image: "/resume.png",
       tech: ["React", "Firebase", "Bootstrap", "Redux"],
-      liveUrl: "https://startup-community.netlify.app/",
+      liveUrl: "https://resume-buildir.netlify.app/",
     },
     {
       title: "PERSONAL-FINANCE-TRACKER",
@@ -65,10 +65,10 @@ const ProjectShowcase = () => {
       title: "IoT Monitoring Dashboard",
       description:
         "Real-time IoT device monitoring with sensor data visualization, alerts, and automated control systems for smart environments.",
-      image: "/placeholder.svg?height=300&width=500",
+      image: "/startup-community-project.png",
       tech: ["React", "MQTT", "InfluxDB", "Grafana"],
-      liveUrl: "#",
-    },
+      liveUrl: "https://startup-community.netlify.app/",
+    }
   ]
 
   const scrollToIndex = (index: number) => {
