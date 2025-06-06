@@ -33,7 +33,7 @@ const ProjectShowcase = () => {
       title: "FOOD-DELIVERY-APP",
       description:
         "Complete food delivery platform with restaurant management, order tracking, and user authentication. Features responsive design and comprehensive food ordering system.",
-      image: "/food-delivery-project.png",
+      image: "/food.png",
       tech: ["JSP", "Servlets", "HTML5", "CSS3"],
       liveUrl: "https://food-deliverye.netlify.app/",
     },
