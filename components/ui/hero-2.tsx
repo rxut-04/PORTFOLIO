@@ -128,6 +128,14 @@ const Hero2 = () => {
             >
               View Live Projects
             </Link>
+            <Link
+              href="https://premium-python-projects.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto h-12 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 px-6 md:px-8 text-sm md:text-base font-bold text-black hover:from-emerald-600 hover:to-teal-600 flex items-center justify-center transition-all duration-300"
+            >
+              Python Projects
+            </Link>
             <button
               onClick={() => {
                 const contactSection = document.getElementById("contact-form")
