@@ -132,7 +132,7 @@ const Hero2 = () => {
               href="https://premium-python-projects.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto h-12 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 px-6 md:px-8 text-sm md:text-base font-bold text-black hover:from-emerald-600 hover:to-teal-600 flex items-center justify-center transition-all duration-300"
+              className="w-full sm:w-auto h-12 rounded-full bg-gradient-to-r from-fuchsia-500 to-pink-500 px-6 md:px-8 text-sm md:text-base font-bold text-black hover:from-fuchsia-600 hover:to-pink-600 flex items-center justify-center transition-all duration-300"
             >
               Python Projects
             </Link>

@@ -40,6 +40,9 @@ export default function AboutPage() {
             We are a passionate startup team specializing in creating premium final year projects for computer science
             students
           </p>
+          <p className="text-lg text-gray-400 mt-4">
+            Founded in 2025
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
