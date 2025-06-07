@@ -38,7 +38,7 @@ const ProjectShowcase = () => {
       liveUrl: "https://food-deliverye.netlify.app/",
     },
     {
-      title: "STARTUP-COMMUNITY-HUB",
+      title: "AI POWER Resume Builder",
       description:
         "Comprehensive platform connecting startups with investors. Features company registration, investor dashboards, and admin management tools for the startup ecosystem.",
       image: "/resume.png",
@@ -62,11 +62,11 @@ const ProjectShowcase = () => {
       liveUrl: "https://saas-business.netlify.app/",
     },
     {
-      title: "IoT Monitoring Dashboard",
+      title: "STARTUP-COMMUNITY-HUB",
       description:
         "Real-time IoT device monitoring with sensor data visualization, alerts, and automated control systems for smart environments.",
       image: "/startup-community-project.png",
-      tech: ["React", "MQTT", "InfluxDB", "Grafana"],
+      tech: ["Servlets", "JSP", "HTML5", "CSS3"],
       liveUrl: "https://startup-community.netlify.app/",
     }
   ]
