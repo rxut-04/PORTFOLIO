@@ -22,12 +22,22 @@ const BuildProjectHero = () => {
       <div className="relative z-10">
         {/* Navigation */}
         <nav className="container mx-auto flex items-center justify-between px-4 py-4 mt-6">
-          <Link href="/" className="flex items-center">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black">
-              <span className="font-bold">&lt;/&gt;</span>
-            </div>
-            <span className="ml-2 text-lg md:text-xl font-bold text-white font-serif">CodeCraft Solutions</span>
-          </Link>
+          <div className="flex items-center space-x-6">
+            <Link href="/" className="flex items-center">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black">
+                <span className="font-bold">&lt;/&gt;</span>
+              </div>
+              <span className="ml-2 text-lg md:text-xl font-bold text-white font-serif">CodeCraft Solutions</span>
+            </Link>
+            <a
+              href="https://aboutme-premiumm.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:block px-6 py-2 bg-gradient-to-r from-purple-500 to-orange-500 text-white rounded-full hover:from-purple-600 hover:to-orange-600 transition-all duration-300 text-sm font-medium"
+            >
+              Reach Out
+            </a>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
@@ -44,10 +54,20 @@ const BuildProjectHero = () => {
           </div>
 
           {/* Mobile menu button */}
-          <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            <span className="sr-only">Toggle menu</span>
-            {mobileMenuOpen ? <X className="h-6 w-6 text-white" /> : <Menu className="h-6 w-6 text-white" />}
-          </button>
+          <div className="flex items-center space-x-4 md:hidden">
+            <a
+              href="https://aboutme-premiumm.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-gradient-to-r from-purple-500 to-orange-500 text-white rounded-full hover:from-purple-600 hover:to-orange-600 transition-all duration-300 text-sm font-medium"
+            >
+              Reach Out
+            </a>
+            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+              <span className="sr-only">Toggle menu</span>
+              {mobileMenuOpen ? <X className="h-6 w-6 text-white" /> : <Menu className="h-6 w-6 text-white" />}
+            </button>
+          </div>
         </nav>
 
         {/* Mobile Navigation Menu with animation */}
