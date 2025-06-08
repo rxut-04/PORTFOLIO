@@ -21,43 +21,46 @@ const BuildProjectHero = () => {
       {/* Content container */}
       <div className="relative z-10">
         {/* Navigation */}
-        <nav className="container mx-auto flex items-center justify-between px-4 py-4 mt-6">
-          <div className="flex items-center space-x-4">
+        <nav className="container mx-auto flex items-center justify-between px-4 py-4 mt-6 relative z-20">
+          <div className="flex items-center gap-4">
             <Link href="/" className="flex items-center">
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black">
                 <span className="font-bold">&lt;/&gt;</span>
               </div>
               <span className="ml-2 text-lg md:text-xl font-bold text-white font-serif">CodeCraft Solutions</span>
             </Link>
+          </div>
+
+          <div className="flex items-center gap-4">
             <a
               href="https://aboutme-premiumm.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-gradient-to-r from-purple-500 to-orange-500 text-white rounded-full hover:from-purple-600 hover:to-orange-600 transition-all duration-300 text-sm font-medium"
+              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-orange-500 text-white rounded-full hover:from-purple-600 hover:to-orange-600 transition-all duration-300 text-sm font-medium whitespace-nowrap"
             >
               Reach Out
             </a>
-          </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
-            <div className="flex items-center space-x-6">
-              <Link href="/" className="flex items-center text-sm text-gray-300 hover:text-white">
-                <Home className="h-4 w-4 mr-2" />
-                <span>Home</span>
-              </Link>
-              <NavItem label="Services" href="/services" hasDropdown />
-              <NavItem label="Portfolio" href="/portfolio" hasDropdown />
-              <NavItem label="About" href="/about" hasDropdown />
-              <NavItem label="Build Your Own Project" href="/build-project" />
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-6">
+              <div className="flex items-center space-x-6">
+                <Link href="/" className="flex items-center text-sm text-gray-300 hover:text-white">
+                  <Home className="h-4 w-4 mr-2" />
+                  <span>Home</span>
+                </Link>
+                <NavItem label="Services" href="/services" hasDropdown />
+                <NavItem label="Portfolio" href="/portfolio" hasDropdown />
+                <NavItem label="About" href="/about" hasDropdown />
+                <NavItem label="Build Your Own Project" href="/build-project" />
+              </div>
             </div>
-          </div>
 
-          {/* Mobile menu button */}
-          <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            <span className="sr-only">Toggle menu</span>
-            {mobileMenuOpen ? <X className="h-6 w-6 text-white" /> : <Menu className="h-6 w-6 text-white" />}
-          </button>
+            {/* Mobile menu button */}
+            <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+              <span className="sr-only">Toggle menu</span>
+              {mobileMenuOpen ? <X className="h-6 w-6 text-white" /> : <Menu className="h-6 w-6 text-white" />}
+            </button>
+          </div>
         </nav>
 
         {/* Mobile Navigation Menu with animation */}
