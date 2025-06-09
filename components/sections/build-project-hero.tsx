@@ -29,18 +29,6 @@ const BuildProjectHero = () => {
               </div>
               <span className="ml-2 text-lg md:text-xl font-bold text-white font-serif">CodeCraft Solutions</span>
             </Link>
-            <a
-              href="https://aboutme-premiumm.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-purple-500 to-orange-500 text-white rounded-lg hover:from-purple-600 hover:to-orange-600 transition-all duration-300 text-xs font-medium ml-2"
-              style={{ minWidth: 0 }}
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 3h7v7m0 0L10 21l-7-7 11-11z" />
-              </svg>
-              Reach Out
-            </a>
           </div>
 
           {/* Desktop Navigation */}
