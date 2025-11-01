@@ -6,6 +6,17 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  
+  /* Book component variables */
+  --context-card-border: hsla(0, 0%, 92%, 1);
+  --ds-amber-600: oklch(80.25% 0.1953 73.59);
+  --ds-gray-200: hsla(0, 0%, 92%, 1);
+  --ds-gray-1000: hsla(0, 0%, 9%, 1);
+  --ds-gray-alpha-400: hsla(0, 0%, 0%, 0.08);
+  --ds-background-200: hsla(0, 0%, 98%, 1);
+  --ds-book-bind: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 12%, rgba(255, 255, 255, 0.25) 29.25%, rgba(255, 255, 255, 0) 50.5%, rgba(255, 255, 255, 0) 75.25%, rgba(255, 255, 255, 0.25) 91%, rgba(255, 255, 255, 0)), linear-gradient(90deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.1) 12%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.02) 50%, rgba(0, 0, 0, 0.2) 73.5%, rgba(0, 0, 0, 0.5) 75.25%, rgba(0, 0, 0, 0.15) 85.25%, rgba(0, 0, 0, 0));
+  --ds-shadow-book: 0 1px 1px 0 rgba(0, 0, 0, .02), 0 4px 8px -4px rgba(0, 0, 0, .1), 0 16px 24px -8px rgba(0, 0, 0, .03);
+  --ds-shadow-book-border: inset 0 1px 2px 0 rgba(255, 255, 255, .3);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +24,14 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    
+    /* Dark mode book variables */
+    --context-card-border: hsla(0, 0%, 18%, 1);
+    --ds-amber-600: oklch(75.04% 0.1737 74.49);
+    --ds-gray-200: hsla(0, 0%, 12%, 1);
+    --ds-gray-1000: hsla(0, 0%, 93%, 1);
+    --ds-gray-alpha-400: hsla(0, 0%, 100%, 0.14);
+    --ds-background-200: hsla(0, 0%, 0%, 1);
   }
 }
 
@@ -24,4 +43,16 @@ body {
 .bg-grainy {
   background-image: url("/noise.png");
   background-repeat: repeat;
+}
+
+.bg-book-gradient {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 100%);
+}
+
+.dark .bg-book-gradient {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.book-rotate:hover {
+  transform: rotateY(-15deg) rotateX(5deg);
 }

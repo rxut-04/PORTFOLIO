@@ -17,7 +17,7 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
 
-    const message = `Hi! I'm interested in a final year project.
+    const message = `Hi Om! I'd like to discuss a project with you.
 
 Name: ${formData.name}
 Email: ${formData.email}
@@ -26,7 +26,7 @@ Project Type: ${formData.projectType}
 Budget: ${formData.budget}
 Description: ${formData.description}
 
-Please provide more details about your services.`
+Looking forward to connecting!`
 
     const encodedMessage = encodeURIComponent(message)
     const whatsappUrl = `https://wa.me/917020706900?text=${encodedMessage}`
@@ -54,9 +54,9 @@ Please provide more details about your services.`
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 font-serif"
           >
-            Get{" "}
+            Let's{" "}
             <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-orange-400 bg-clip-text text-transparent">
-              Custom Quote
+              Connect
             </span>
           </motion.h2>
           <motion.p
@@ -65,7 +65,7 @@ Please provide more details about your services.`
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto"
           >
-            Tell us about your project requirements and we'll provide you with a detailed quote
+            Tell me about your project and I'll help bring your vision to life
           </motion.p>
         </div>
 
@@ -141,20 +141,23 @@ Please provide more details about your services.`
                   <option value="" className="bg-gray-800">
                     Select project type
                   </option>
-                  <option value="Web Application" className="bg-gray-800">
-                    Web Application
+                  <option value="Web Development" className="bg-gray-800">
+                    Web Development
                   </option>
-                  <option value="Real-time Dashboard" className="bg-gray-800">
-                    Real-time Dashboard
+                  <option value="Mobile App" className="bg-gray-800">
+                    Mobile App
                   </option>
-                  <option value="Data Visualization" className="bg-gray-800">
-                    Data Visualization
+                  <option value="UI/UX Design" className="bg-gray-800">
+                    UI/UX Design
                   </option>
-                  <option value="E-commerce Platform" className="bg-gray-800">
-                    E-commerce Platform
+                  <option value="Full Stack Project" className="bg-gray-800">
+                    Full Stack Project
                   </option>
-                  <option value="Custom Project" className="bg-gray-800">
-                    Custom Project
+                  <option value="Consultation" className="bg-gray-800">
+                    Consultation
+                  </option>
+                  <option value="Other" className="bg-gray-800">
+                    Other
                   </option>
                 </select>
               </div>
@@ -175,14 +178,20 @@ Please provide more details about your services.`
                 <option value="" className="bg-gray-800">
                   Select budget range
                 </option>
-                <option value="₹8,000 - ₹12,000" className="bg-gray-800">
-                  ₹8,000 - ₹12,000
+                <option value="Under ₹10,000" className="bg-gray-800">
+                  Under ₹10,000
                 </option>
-                <option value="₹12,000 - ₹15,000" className="bg-gray-800">
-                  ₹12,000 - ₹15,000
+                <option value="₹10,000 - ₹25,000" className="bg-gray-800">
+                  ₹10,000 - ₹25,000
                 </option>
-                <option value="₹15,000+" className="bg-gray-800">
-                  ₹15,000+
+                <option value="₹25,000 - ₹50,000" className="bg-gray-800">
+                  ₹25,000 - ₹50,000
+                </option>
+                <option value="₹50,000+" className="bg-gray-800">
+                  ₹50,000+
+                </option>
+                <option value="Let's Discuss" className="bg-gray-800">
+                  Let's Discuss
                 </option>
               </select>
             </div>
@@ -211,7 +220,7 @@ Please provide more details about your services.`
             </button>
 
             <p className="text-sm text-gray-400 text-center mt-4">
-              This will open WhatsApp with your project details pre-filled
+              This will open WhatsApp to connect directly with Om Raut
             </p>
           </motion.form>
         </div>

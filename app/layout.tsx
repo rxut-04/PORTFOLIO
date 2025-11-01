@@ -9,6 +9,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Antic&display=swap"
+        />
+      </head>
       <body className={`${cinzel.variable}`}>{children}</body>
     </html>
   )

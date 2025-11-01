@@ -52,14 +52,13 @@ export function Footer() {
               className="lg:col-span-1"
             >
               <div className="flex items-center mb-4">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black">
-                  <span className="font-bold text-sm">&lt;/&gt;</span>
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-orange-500 text-white">
+                  <span className="font-bold text-sm">OR</span>
                 </div>
-                <span className="ml-2 text-xl font-bold text-white font-serif">CodeCraft Solutions</span>
+                <span className="ml-2 text-xl font-bold text-white font-serif">Om Raut</span>
               </div>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                Creating premium final year projects for computer science students with cutting-edge technologies and
-                modern development practices.
+                Full-stack developer & designer crafting exceptional digital experiences. Specializing in modern web technologies and user-centric design.
               </p>
 
               {/* Contact Info */}
@@ -70,7 +69,7 @@ export function Footer() {
                 </div>
                 <div className="flex items-center text-gray-400">
                   <Mail className="h-4 w-4 mr-3 text-purple-400" />
-                  <span className="text-sm">info@codecraftsolutions.com</span>
+                  <span className="text-sm">omraut.dev@gmail.com</span>
                 </div>
                 <div className="flex items-center text-gray-400">
                   <MapPin className="h-4 w-4 mr-3 text-purple-400" />
@@ -85,7 +84,7 @@ export function Footer() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h3 className="text-lg font-semibold text-white mb-4 font-serif">Services</h3>
+              <h3 className="text-lg font-semibold text-white mb-4 font-serif">What I Do</h3>
               <ul className="space-y-3">
                 {footerLinks.services.map((link, index) => (
                   <li key={index}>
@@ -103,7 +102,7 @@ export function Footer() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h3 className="text-lg font-semibold text-white mb-4 font-serif">Company</h3>
+              <h3 className="text-lg font-semibold text-white mb-4 font-serif">Quick Links</h3>
               <ul className="space-y-3">
                 {footerLinks.company.map((link, index) => (
                   <li key={index}>
@@ -121,7 +120,7 @@ export function Footer() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <h3 className="text-lg font-semibold text-white mb-4 font-serif">Technologies</h3>
+              <h3 className="text-lg font-semibold text-white mb-4 font-serif">Tech Stack</h3>
               <ul className="space-y-3">
                 {footerLinks.technologies.map((link, index) => (
                   <li key={index}>
@@ -163,12 +162,12 @@ export function Footer() {
               <div className="flex items-center gap-4">
                 <span className="text-gray-400 text-sm">Ready to start?</span>
                 <a
-                  href="https://wa.me/917020706900?text=Hi! I'm interested in a final year project. Please provide more details."
+                  href="https://wa.me/917020706900?text=Hi Om! I'd like to connect with you regarding a project."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-2 bg-gradient-to-r from-purple-500 to-orange-500 text-white rounded-full hover:from-purple-600 hover:to-orange-600 transition-all duration-300 text-sm font-medium"
                 >
-                  WhatsApp Us
+                  WhatsApp Me
                 </a>
                 <a
                   href="https://aboutme-premiumm.netlify.app/"
@@ -191,7 +190,7 @@ export function Footer() {
         <div className="border-t border-white/10 bg-black/50">
           <div className="container mx-auto px-4 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <div className="text-gray-400 text-sm">© {currentYear} CodeCraft Solutions. All rights reserved.</div>
+              <div className="text-gray-400 text-sm">© {currentYear} Om Raut. All rights reserved.</div>
               <div className="flex items-center gap-6 text-sm">
                 <Link href="#" className="text-gray-400 hover:text-white transition-colors">
                   Privacy Policy
@@ -201,7 +200,7 @@ export function Footer() {
                 </Link>
                 <div className="text-gray-400">
                   Made with <span className="text-red-500 mx-1">❤️</span>
-                  for students
+                  and code
                 </div>
               </div>
             </div>

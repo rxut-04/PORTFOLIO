@@ -63,7 +63,7 @@ const TechStack = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-sm md:text-xl text-gray-300 max-w-3xl mx-auto"
           >
-            Cutting-edge technologies that power our premium final year projects
+            Modern technologies I use to build exceptional digital experiences
           </motion.p>
         </div>
 
