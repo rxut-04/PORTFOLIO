@@ -13,9 +13,10 @@ const jsonLd = {
   name: "Om Raut",
   url: "https://rauttportfoliio.netlify.app",
   sameAs: [],
-  jobTitle: "Web Developer & Designer",
+  jobTitle: "Frontend Web Developer & Designer",
   description:
-    "Om Raut is a web developer and designer. This is the official portfolio of Om Raut showcasing projects and skills.",
+    "Om Raut is a frontend web developer and designer specializing in React and Next.js. This is the official developer portfolio of Om Raut.",
+  knowsAbout: ["Web Development", "Frontend Development", "React", "Next.js", "UI Design"],
 }
 
 export default function Home() {

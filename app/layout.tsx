@@ -4,17 +4,18 @@ import { cinzel } from "./fonts"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Om Raut | Portfolio – Web Developer & Designer",
+  title: "Om Raut – Frontend Developer & Designer Portfolio",
   description:
-    "Official portfolio of Om Raut – a passionate web developer and designer. Explore projects, skills, and get in touch.",
+    "Om Raut is a frontend web developer and designer. Explore the official developer portfolio of Om Raut – projects, skills, and contact.",
   keywords: [
-    "Om Raut",
-    "Om Raut portfolio",
-    "Raut portfolio",
     "Om Raut developer",
     "Om Raut web developer",
+    "Om Raut frontend developer",
+    "Om Raut portfolio",
+    "Om Raut developer portfolio",
     "Om Raut designer",
-    "portfolio Om Raut",
+    "Om Raut React developer",
+    "Om Raut Next.js developer",
   ],
   authors: [{ name: "Om Raut" }],
   creator: "Om Raut",
