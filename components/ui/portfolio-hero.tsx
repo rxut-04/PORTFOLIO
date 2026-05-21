@@ -283,7 +283,7 @@ export default function PortfolioHero() {
 
         {/* Tagline - Proper Distance Below Hero */}
         <div className="absolute bottom-28 sm:bottom-32 md:bottom-36 lg:bottom-40 xl:bottom-44 left-1/2 -translate-x-1/2 w-full px-6">
-          <div className="flex justify-center">
+          <div className="flex flex-col items-center gap-1">
             <BlurText
               text="Full-stack developer crafting digital excellence."
               delay={150}
@@ -292,6 +292,12 @@ export default function PortfolioHero() {
               className="text-[15px] sm:text-[18px] md:text-[20px] lg:text-[22px] text-center transition-colors duration-300 text-neutral-500 hover:text-black dark:hover:text-white"
               style={{ fontFamily: "'Antic', sans-serif" }}
             />
+            <p
+              className="text-[11px] sm:text-[13px] text-center text-neutral-600 dark:text-neutral-600"
+              style={{ fontFamily: "'Antic', sans-serif" }}
+            >
+              Om Raut · Developer Portfolio
+            </p>
           </div>
         </div>
 
