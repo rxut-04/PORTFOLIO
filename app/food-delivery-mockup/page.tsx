@@ -1,166 +1,153 @@
 "use client"
 
+import Link from "next/link"
+
 export default function FoodDeliveryMockup() {
   return (
-    <div className="min-h-screen bg-black relative overflow-hidden">
-      {/* Gradient background matching the reference */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-black"></div>
-      <div className="absolute inset-0 bg-[url('/noise.png')] opacity-30"></div>
+    <div style={{ backgroundColor: "#0a0a0a", color: "#fff" }} className="min-h-screen">
 
-      {/* Content */}
-      <div className="relative z-10 p-8">
-        {/* Header */}
-        <div className="flex items-center justify-between mb-12">
-          <div className="flex items-center">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black">
-              <span className="font-bold text-sm">&lt;/&gt;</span>
+      {/* Nav */}
+      <nav className="flex items-center justify-between px-[4vw] py-6">
+        <Link
+          href="/"
+          className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 hover:text-[#C3E41D] transition-colors duration-300"
+        >
+          ← Back Home
+        </Link>
+        <span
+          className="text-2xl font-bold"
+          style={{ fontFamily: "'Brush Script MT', cursive", color: "#C3E41D" }}
+        >
+          O
+        </span>
+      </nav>
+
+      {/* Hero */}
+      <section className="px-[4vw] pt-[clamp(2rem,6vw,4rem)] pb-[4vw]">
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mb-[2vw]">
+          Project — Food Delivery
+        </p>
+        <hr className="border-t border-white/10 mb-[3vw]" />
+
+        <h1
+          className="text-[clamp(3.5rem,12vw,14rem)] font-bold leading-[0.85] uppercase tracking-tight"
+          style={{ fontFamily: "'Fira Code', monospace" }}
+        >
+          Food.
+          <br />
+          <span style={{ color: "#C3E41D" }}>Order.</span>
+          <br />
+          Deliver.
+        </h1>
+
+        <hr className="border-t border-white/10 mt-[3vw] mb-[3vw]" />
+
+        <p className="text-[clamp(1rem,2.5vw,1.5rem)] text-white/60 max-w-[50ch] mb-[3vw]">
+          A complete food delivery platform with restaurant management, real-time order tracking,
+          and seamless user authentication — built as a final year project showcase.
+        </p>
+      </section>
+
+      {/* Features */}
+      <section className="px-[4vw] py-[4vw]" style={{ backgroundColor: "#111" }}>
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mb-[2vw]">
+          Features
+        </p>
+        <hr className="border-t border-white/10 mb-[3vw]" />
+        <div className="flex flex-wrap gap-[3vw]">
+          {[
+            { title: "Restaurant Dashboard", desc: "Full management panel for restaurant owners — menu, orders, analytics." },
+            { title: "Real-time Tracking", desc: "Live order status updates from placement to delivery at your door." },
+            { title: "User Auth", desc: "Secure registration, login, and profile management for customers." },
+            { title: "Responsive Design", desc: "Works flawlessly on mobile, tablet, and desktop." },
+            { title: "Payment Gateway", desc: "Integrated payment flow for seamless checkout experience." },
+          ].map((f) => (
+            <div key={f.title} className="min-w-[200px] flex-1">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] mb-2" style={{ color: "#C3E41D" }}>
+                {f.title}
+              </p>
+              <p className="text-[clamp(0.85rem,1.3vw,1rem)] text-white/60 leading-relaxed">
+                {f.desc}
+              </p>
             </div>
-            <span className="ml-2 text-lg font-bold text-white font-serif">Code Craft Solutions</span>
-          </div>
-          <div className="text-white text-sm">
-            <span className="bg-white/10 px-4 py-2 rounded-full border border-white/20">
-              Academic Excellence Starts HERE! →
-            </span>
-          </div>
+          ))}
         </div>
+      </section>
 
-        {/* Main Content */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-serif leading-tight">
-            PREMIUM FINAL YEAR PROJECTS
-            <br />
-            FOR{" "}
-            <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-orange-400 bg-clip-text text-transparent">
-              COMPUTER SCIENCE
+      {/* Tech Stack */}
+      <section className="px-[4vw] py-[4vw]">
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mb-[2vw]">
+          Technology Stack
+        </p>
+        <hr className="border-t border-white/10 mb-[3vw]" />
+        <div className="flex flex-wrap gap-3">
+          {["JSP", "Servlets", "HTML5", "CSS3", "JavaScript", "MySQL"].map((t) => (
+            <span
+              key={t}
+              className="text-xs font-bold uppercase tracking-[0.15em] px-4 py-2 border border-white/20 hover:border-[#C3E41D] hover:text-[#C3E41D] transition-colors duration-300"
+            >
+              {t}
             </span>
-            <br />
-            <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-orange-400 bg-clip-text text-transparent">
-              STUDENTS
-            </span>
-          </h1>
-          <p className="text-gray-300 text-lg max-w-4xl mx-auto mb-8 leading-relaxed">
-            Elevate your academic journey with cutting-edge, industry-ready projects. From
-            <br />
-            AI and machine learning to web development and mobile apps - we deliver
-            <br />
-            exceptional solutions.
-          </p>
-          <div className="flex gap-4 justify-center">
-            <button className="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
-              Browse Projects
-            </button>
-            <button className="border border-gray-600 text-white px-8 py-3 rounded-full hover:bg-white/10 transition-colors">
-              Get Free Consultation
-            </button>
-          </div>
+          ))}
         </div>
+      </section>
 
-        {/* Project Preview Section */}
-        <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-          {/* Left side - Project details */}
-          <div className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Food. Order.
-              <br />
-              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
-                Deliver.
-              </span>
+      {/* Preview */}
+      <section className="px-[4vw] py-[4vw]" style={{ backgroundColor: "#C3E41D", color: "#000" }}>
+        <hr className="border-t border-black/20 mb-[3vw]" />
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-[4vw]">
+          <div>
+            <h2
+              className="text-[clamp(2rem,6vw,6rem)] font-bold leading-[0.85] uppercase tracking-tight mb-4"
+              style={{ fontFamily: "'Fira Code', monospace" }}
+            >
+              FEASTO
             </h2>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Experience food delivery like never before with comprehensive
-              <br />
-              restaurant management, real-time order tracking, and seamless
-              <br />
-              user authentication system.
+            <p className="text-[clamp(1rem,2vw,1.25rem)] opacity-70 max-w-[40ch] mb-6">
+              Discover Flavors. Anywhere. From local gems to top-rated kitchens — delivered fast.
             </p>
-
-            {/* Feature List */}
-            <div className="space-y-3 mb-8">
-              <div className="flex items-center text-sm text-gray-300">
-                <span className="w-2 h-2 bg-orange-500 rounded-full mr-4"></span>
-                <span>Restaurant Management Dashboard</span>
-              </div>
-              <div className="flex items-center text-sm text-gray-300">
-                <span className="w-2 h-2 bg-orange-500 rounded-full mr-4"></span>
-                <span>Real-time Order Tracking System</span>
-              </div>
-              <div className="flex items-center text-sm text-gray-300">
-                <span className="w-2 h-2 bg-orange-500 rounded-full mr-4"></span>
-                <span>User Authentication & Profile Management</span>
-              </div>
-              <div className="flex items-center text-sm text-gray-300">
-                <span className="w-2 h-2 bg-orange-500 rounded-full mr-4"></span>
-                <span>Responsive Design Architecture</span>
-              </div>
-              <div className="flex items-center text-sm text-gray-300">
-                <span className="w-2 h-2 bg-orange-500 rounded-full mr-4"></span>
-                <span>Payment Gateway Integration</span>
-              </div>
-            </div>
-
-            {/* Technology Stack */}
-            <div className="mb-6">
-              <p className="text-xs text-gray-400 mb-2">TECHNOLOGY STACK</p>
-              <div className="flex gap-2">
-                <span className="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-xs">JSP</span>
-                <span className="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-xs">Servlets</span>
-                <span className="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-xs">HTML5</span>
-                <span className="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-xs">CSS3</span>
-              </div>
-            </div>
-
-            <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-orange-600 hover:to-red-600 transition-colors">
-              🚀 Start Building
-            </button>
+            <a
+              href="https://food-deliverye.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 text-[clamp(0.9rem,1.5vw,1.1rem)] font-bold uppercase tracking-widest text-black hover:opacity-60 transition-opacity"
+            >
+              <span className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-black">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </span>
+              Visit Live Site
+            </a>
           </div>
 
-          {/* Right side - Visual element */}
-          <div className="relative flex items-center justify-center">
-            {/* FEASTO Preview Window */}
-            <div className="relative bg-gradient-to-br from-red-900/30 to-orange-900/30 backdrop-blur-sm border border-orange-500/30 rounded-2xl p-6 w-full max-w-md">
-              {/* Browser-like header */}
-              <div className="flex items-center gap-2 mb-4 pb-3 border-b border-white/10">
-                <div className="flex gap-1">
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+          {/* Browser mockup */}
+          <div className="flex-1 max-w-lg">
+            <div className="bg-black rounded-sm overflow-hidden border border-black/20">
+              <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10">
+                <div className="flex gap-1.5">
+                  <div className="w-3 h-3 bg-red-500 rounded-full" />
+                  <div className="w-3 h-3 bg-yellow-500 rounded-full" />
+                  <div className="w-3 h-3 bg-green-500 rounded-full" />
                 </div>
-                <div className="text-xs text-gray-400 ml-2">food-deliverye.netlify.app</div>
+                <span className="text-xs text-white/40 ml-2">food-deliverye.netlify.app</span>
               </div>
-
-              {/* FEASTO Interface */}
-              <div className="text-center">
-                <div className="flex items-center justify-center mb-6">
-                  <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center mr-2">
-                    <span className="text-white font-bold text-sm">🍕</span>
-                  </div>
-                  <span className="text-white font-bold text-xl">FEASTO</span>
+              <div className="p-6 text-center">
+                <div className="flex items-center justify-center gap-2 mb-4">
+                  <span className="text-2xl">🍕</span>
+                  <span className="text-white font-bold text-xl" style={{ fontFamily: "'Fira Code', monospace" }}>FEASTO</span>
                 </div>
-
-                <h3 className="text-2xl font-bold text-white mb-2">Discover Flavors.</h3>
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent mb-4">
-                  Anywhere.
-                </h3>
-                <p className="text-gray-300 text-sm mb-6">From local gems to top-rated kitchens—delivered fast.</p>
-
-                <div className="flex gap-2 justify-center mb-6">
-                  <button className="bg-orange-500 text-white px-4 py-2 rounded-full text-xs font-medium">
-                    Explore Cuisines
-                  </button>
-                  <button className="border border-gray-500 text-white px-4 py-2 rounded-full text-xs">
-                    Track Order
-                  </button>
+                <p className="text-white/60 text-sm mb-4">Discover Flavors. Anywhere.</p>
+                <div className="flex gap-2 justify-center">
+                  <span className="px-3 py-1.5 text-xs font-bold uppercase tracking-wider border border-[#C3E41D] text-[#C3E41D]">Explore</span>
+                  <span className="px-3 py-1.5 text-xs font-bold uppercase tracking-wider border border-white/20 text-white/40">Track Order</span>
                 </div>
               </div>
             </div>
-
-            {/* 3D Food Element */}
-            <div className="absolute -right-8 -bottom-8 text-8xl opacity-80">🍔</div>
-            <div className="absolute -left-4 -top-4 text-4xl opacity-60">🍕</div>
-            <div className="absolute right-4 top-8 text-3xl opacity-70">🥤</div>
           </div>
         </div>
-      </div>
+      </section>
+
     </div>
   )
 }

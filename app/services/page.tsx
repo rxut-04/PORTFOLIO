@@ -1,88 +1,178 @@
 "use client"
 
-import { motion } from "framer-motion"
 import Link from "next/link"
-import { Home } from "lucide-react"
+import { Footer } from "@/components/sections/footer"
+
+const services = [
+  {
+    num: "01",
+    title: "Web Development",
+    price: "₹8,000 – ₹15,000",
+    description: "Custom websites and web apps built with Next.js — fast, SEO-optimized, and production-ready.",
+    features: ["React / Next.js", "Node.js Backend", "Database Integration", "API Development"],
+    bg: "#C3E41D",
+    color: "#000",
+  },
+  {
+    num: "02",
+    title: "Real-time Applications",
+    price: "₹10,000 – ₹18,000",
+    description: "WebSocket-powered apps — live dashboards, chat systems, and collaborative tools.",
+    features: ["WebSocket Implementation", "Live Data Visualization", "Real-time Chat", "Collaborative Features"],
+    bg: "#0a0a0a",
+    color: "#fff",
+  },
+  {
+    num: "03",
+    title: "Data Visualization",
+    price: "₹12,000 – ₹20,000",
+    description: "Interactive dashboards and analytics platforms built with D3.js and Recharts.",
+    features: ["D3.js Visualizations", "Custom Charts", "Analytics Dashboard", "Data Processing"],
+    bg: "#1A3DE8",
+    color: "#fff",
+  },
+  {
+    num: "04",
+    title: "UI/UX Design",
+    price: "₹5,000 – ₹12,000",
+    description: "Clean, intuitive interfaces designed in Figma and brought to life with pixel-perfect code.",
+    features: ["Figma Prototyping", "Responsive Design", "Design Systems", "User Research"],
+    bg: "#F5F0E8",
+    color: "#000",
+  },
+  {
+    num: "05",
+    title: "Full Stack Projects",
+    price: "₹15,000 – ₹40,000",
+    description: "End-to-end development — frontend, backend, database, and deployment all handled by one person.",
+    features: ["Complete Architecture", "Frontend + Backend", "Database Design", "Deployment"],
+    bg: "#0a0a0a",
+    color: "#fff",
+  },
+  {
+    num: "06",
+    title: "Consultation",
+    price: "₹2,000 / session",
+    description: "Tech stack advice, code reviews, architecture planning — expert guidance before you build.",
+    features: ["Tech Stack Review", "Code Audit", "Architecture Planning", "1-on-1 Session"],
+    bg: "#C3E41D",
+    color: "#000",
+  },
+]
 
 export default function ServicesPage() {
-  const services = [
-    {
-      title: "Full-Stack Web Development",
-      description: "Complete web applications with modern frameworks and databases",
-      features: ["React/Next.js Development", "Node.js Backend", "Database Integration", "API Development"],
-      price: "₹8,000 - ₹15,000",
-    },
-    {
-      title: "Real-time Applications",
-      description: "Interactive applications with live data and WebSocket integration",
-      features: ["WebSocket Implementation", "Live Data Visualization", "Real-time Chat", "Collaborative Features"],
-      price: "₹10,000 - ₹18,000",
-    },
-    {
-      title: "Data Visualization Projects",
-      description: "Interactive dashboards and data analysis platforms",
-      features: ["D3.js Visualizations", "Custom Charts", "Analytics Dashboard", "Data Processing"],
-      price: "₹12,000 - ₹20,000",
-    },
-  ]
-
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className="min-h-screen bg-black text-white"
-    >
-      {/* Navigation */}
-      <nav className="container mx-auto flex items-center justify-between px-4 py-4 mt-6">
-        <Link href="/" className="flex items-center">
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black">
-            <span className="font-bold">&lt;/&gt;</span>
-          </div>
-          <span className="ml-2 text-lg md:text-xl font-bold text-white font-serif">CodeCraft Solutions</span>
-        </Link>
+    <div style={{ backgroundColor: "#0a0a0a", color: "#fff" }} className="min-h-screen">
 
-        {/* Home Link */}
-        <Link href="/" className="flex items-center text-sm text-gray-300 hover:text-white">
-          <Home className="h-4 w-4 mr-2" />
-          <span>Home</span>
+      {/* Nav */}
+      <nav className="flex items-center justify-between px-[4vw] py-6">
+        <Link
+          href="/"
+          className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 hover:text-[#C3E41D] transition-colors duration-300"
+        >
+          ← Back Home
         </Link>
+        <span
+          className="text-2xl font-bold"
+          style={{ fontFamily: "'Brush Script MT', cursive", color: "#C3E41D" }}
+        >
+          O
+        </span>
       </nav>
 
-      <div className="container mx-auto px-4 py-12">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 font-serif">
-            Our{" "}
-            <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-orange-400 bg-clip-text text-transparent">
-              Services
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Premium web development services tailored for final year computer science projects
-          </p>
-        </div>
+      {/* Header */}
+      <section className="px-[4vw] pt-[clamp(2rem,6vw,4rem)] pb-[4vw]">
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mb-[2vw]">
+          Services
+        </p>
+        <hr className="border-t border-white/10 mb-[3vw]" />
+        <h1
+          className="text-[clamp(3.5rem,12vw,14rem)] font-bold leading-[0.85] uppercase tracking-tight"
+          style={{ fontFamily: "'Fira Code', monospace" }}
+        >
+          What
+          <br />
+          I <span style={{ color: "#C3E41D" }}>Build</span>
+          <br />
+          For You.
+        </h1>
+        <hr className="border-t border-white/10 mt-[3vw]" />
+      </section>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
-            >
-              <h3 className="text-2xl font-bold mb-4 font-serif">{service.title}</h3>
-              <p className="text-gray-400 mb-6">{service.description}</p>
-              <ul className="space-y-2 mb-6">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-sm">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <div className="text-2xl font-bold text-purple-400">{service.price}</div>
+      {/* Service Cards */}
+      <section>
+        {services.map((s) => (
+          <div
+            key={s.num}
+            className="px-[4vw] py-[4vw] flex flex-col lg:flex-row justify-between gap-[4vw]"
+            style={{ backgroundColor: s.bg, color: s.color }}
+          >
+            {/* Left */}
+            <div className="flex-1">
+              <p
+                className="text-xs font-bold uppercase tracking-[0.2em] mb-4"
+                style={{ opacity: 0.5 }}
+              >
+                {s.num}
+              </p>
+              <h2
+                className="text-[clamp(2rem,6vw,6rem)] font-bold leading-[0.85] uppercase tracking-tight mb-4"
+                style={{ fontFamily: "'Fira Code', monospace" }}
+              >
+                {s.title}
+              </h2>
+              <p
+                className="text-[clamp(1.5rem,3vw,2.5rem)] font-bold"
+                style={{ opacity: 0.6 }}
+              >
+                {s.price}
+              </p>
             </div>
-          ))}
+
+            {/* Right */}
+            <div className="flex-1 max-w-lg">
+              <hr className="border-t mb-6" style={{ borderColor: s.color === "#fff" ? "rgba(255,255,255,0.2)" : "rgba(0,0,0,0.2)" }} />
+              <p className="text-[clamp(1rem,2vw,1.25rem)] leading-relaxed mb-6" style={{ opacity: 0.7 }}>
+                {s.description}
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {s.features.map((f) => (
+                  <span
+                    key={f}
+                    className="text-xs font-bold uppercase tracking-[0.15em] px-3 py-1.5 border"
+                    style={{ borderColor: s.color === "#fff" ? "rgba(255,255,255,0.3)" : "rgba(0,0,0,0.3)" }}
+                  >
+                    {f}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </section>
+
+      {/* CTA */}
+      <section className="px-[4vw] py-[4vw]">
+        <hr className="border-t border-white/10 mb-[3vw]" />
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <p className="text-[clamp(1rem,2.5vw,1.5rem)] text-white/60 max-w-[40ch]">
+            Ready to start? Tell me about your project and I'll get back to you within a few hours.
+          </p>
+          <Link
+            href="/#contact-form"
+            className="inline-flex items-center gap-3 text-[clamp(0.9rem,1.5vw,1.1rem)] font-bold uppercase tracking-widest text-[#C3E41D] hover:text-white transition-colors duration-300"
+          >
+            <span className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-[#C3E41D]">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </span>
+            Start A Project
+          </Link>
         </div>
-      </div>
-    </motion.div>
+      </section>
+
+      <Footer />
+    </div>
   )
 }

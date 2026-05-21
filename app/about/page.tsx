@@ -1,121 +1,180 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { Sparkles } from "lucide-react"
 import Link from "next/link"
 import { Footer } from "@/components/sections/footer"
 import BookSlider from "@/components/ui/book-slider"
 
 export default function AboutPage() {
-
   return (
-    <div className="min-h-screen bg-black">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-20"></div>
+    <div style={{ backgroundColor: "#0a0a0a", color: "#fff" }} className="min-h-screen">
 
-        <div className="relative z-10 container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-serif">
-              About{" "}
-              <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-orange-400 bg-clip-text text-transparent">
-                Me
-              </span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
-              Hi, I'm <span className="text-white font-bold">Om Raut</span>, a full-stack developer passionate about
-              creating beautiful, functional digital experiences. I specialize in modern web technologies and love
-              turning ideas into reality through code.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/"
-                className="px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full hover:bg-white/20 transition-all duration-300"
+      {/* ── Nav ── */}
+      <nav className="flex items-center justify-between px-[4vw] py-6">
+        <Link
+          href="/"
+          className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 hover:text-[#C3E41D] transition-colors duration-300"
+        >
+          ← Back Home
+        </Link>
+        <span
+          className="text-2xl font-bold"
+          style={{ fontFamily: "'Brush Script MT', cursive", color: "#C3E41D" }}
+        >
+          O
+        </span>
+      </nav>
+
+      {/* ── Hero ── */}
+      <section className="px-[4vw] pt-[clamp(2rem,6vw,4rem)] pb-[4vw]">
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mb-[2vw]">
+          01 — About Me
+        </p>
+        <hr className="border-t border-white/10 mb-[3vw]" />
+
+        <h1
+          className="text-[clamp(3.5rem,12vw,14rem)] font-bold leading-[0.85] uppercase tracking-tight mb-[3vw]"
+          style={{ fontFamily: "'Fira Code', monospace" }}
+        >
+          Hi, I'm
+          <br />
+          <span style={{ color: "#C3E41D" }}>Om</span>
+          <br />
+          Raut.
+        </h1>
+
+        <hr className="border-t border-white/10 mb-[3vw]" />
+
+        <div className="flex flex-col lg:flex-row gap-[4vw] max-w-5xl">
+          <p className="text-[clamp(1rem,2.5vw,1.5rem)] font-normal leading-relaxed text-white/70 max-w-[50ch]">
+            I'm a full-stack developer and designer based in India. I build fast, beautiful, and
+            functional web experiences — from pixel-perfect UIs to robust backend systems.
+          </p>
+          <p className="text-[clamp(1rem,2.5vw,1.5rem)] font-normal leading-relaxed text-white/70 max-w-[50ch]">
+            I'm passionate about clean code, great design, and solving real problems through
+            technology. When I'm not coding, I'm reading, exploring ideas, and learning something new.
+          </p>
+        </div>
+
+        <hr className="border-t border-white/10 mt-[3vw] mb-[3vw]" />
+
+        {/* Stats */}
+        <div className="flex flex-wrap gap-[4vw]">
+          {[
+            { num: "6+", label: "Projects Shipped" },
+            { num: "3+", label: "Years Building" },
+            { num: "10+", label: "Technologies" },
+            { num: "100%", label: "Client Satisfaction" },
+          ].map((s) => (
+            <div key={s.label}>
+              <p
+                className="text-[clamp(2rem,6vw,5rem)] font-bold leading-none"
+                style={{ color: "#C3E41D", fontFamily: "'Fira Code', monospace" }}
               >
-                ← Back Home
-              </Link>
-              <button
-                onClick={() => {
-                  window.location.href = "/#contact-form"
-                }}
-                className="px-6 py-3 bg-gradient-to-r from-purple-500 to-orange-500 text-white rounded-full hover:from-purple-600 hover:to-orange-600 transition-all duration-300"
-              >
-                Get in Touch
-              </button>
+                {s.num}
+              </p>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mt-1">
+                {s.label}
+              </p>
             </div>
-          </motion.div>
+          ))}
         </div>
       </section>
 
-      {/* Creative Zone / My Inspirations Section */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-10"></div>
+      {/* ── Skills ── */}
+      <section className="px-[4vw] py-[4vw]" style={{ backgroundColor: "#111" }}>
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mb-[2vw]">
+          02 — Skills & Stack
+        </p>
+        <hr className="border-t border-white/10 mb-[3vw]" />
 
-        {/* Decorative gradient blobs */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl"></div>
-
-        <div className="relative z-10 container mx-auto px-4">
-          {/* Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12 md:mb-16"
-          >
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Sparkles className="w-8 h-8 text-yellow-400" />
-              <h2 className="text-3xl md:text-5xl font-bold text-white font-serif">My Inspirations</h2>
+        <div className="flex flex-wrap gap-[3vw]">
+          {[
+            { cat: "Frontend", items: "React · Next.js · TypeScript · Tailwind CSS · Framer Motion · GSAP" },
+            { cat: "Backend", items: "Node.js · Express · REST APIs · WebSockets" },
+            { cat: "Database", items: "MongoDB · PostgreSQL" },
+            { cat: "Tools", items: "Git · Figma · Netlify · Vercel · VS Code" },
+            { cat: "Mobile", items: "React Native" },
+            { cat: "Data Viz", items: "D3.js · Recharts" },
+          ].map((s) => (
+            <div key={s.cat} className="min-w-[200px] flex-1">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] mb-2" style={{ color: "#C3E41D" }}>
+                {s.cat}
+              </p>
+              <p className="text-[clamp(0.85rem,1.3vw,1rem)] text-white/60 leading-relaxed">
+                {s.items}
+              </p>
             </div>
-            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
-              Every idea starts from curiosity.
-              <br />
-              Here's what's inspiring me lately:
-            </p>
-          </motion.div>
-
-          {/* Interactive Book Slider */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex justify-center"
-          >
-            <BookSlider />
-          </motion.div>
-
-          {/* Instruction Text */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-center mt-8"
-          >
-            <p className="text-gray-400 text-sm md:text-base">
-              ← Click the corners to flip pages →
-            </p>
-          </motion.div>
-
-          {/* Additional inspiration quote */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-center mt-12 md:mt-16"
-          >
-            <p className="text-gray-500 italic text-sm md:text-base max-w-2xl mx-auto">
-              "Reading is to the mind what exercise is to the body." — Joseph Addison
-            </p>
-          </motion.div>
+          ))}
         </div>
       </section>
 
-      {/* Footer */}
+      {/* ── Inspirations / Book Slider ── */}
+      <section className="px-[4vw] py-[4vw]">
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mb-[2vw]">
+          03 — My Inspirations
+        </p>
+        <hr className="border-t border-white/10 mb-[3vw]" />
+
+        <h2
+          className="text-[clamp(2rem,6vw,6rem)] font-bold leading-[0.85] uppercase tracking-tight mb-[3vw]"
+          style={{ fontFamily: "'Fira Code', monospace" }}
+        >
+          What I'm
+          <br />
+          <span style={{ color: "#C3E41D" }}>Reading</span>
+        </h2>
+
+        <p className="text-[clamp(0.85rem,1.3vw,1rem)] text-white/40 mb-[3vw] uppercase tracking-[0.2em]">
+          ← Click the corners to flip pages →
+        </p>
+
+        <div className="flex justify-center">
+          <BookSlider />
+        </div>
+
+        <p className="text-center text-white/30 italic text-sm mt-8">
+          "Reading is to the mind what exercise is to the body." — Joseph Addison
+        </p>
+      </section>
+
+      {/* ── CTA ── */}
+      <section className="px-[4vw] py-[4vw]" style={{ backgroundColor: "#C3E41D", color: "#000" }}>
+        <hr className="border-t border-black/20 mb-[3vw]" />
+        <h2
+          className="text-[clamp(2.5rem,8vw,10rem)] font-bold leading-[0.85] uppercase tracking-tight mb-[3vw]"
+          style={{ fontFamily: "'Fira Code', monospace" }}
+        >
+          Let's Work
+          <br />
+          Together.
+        </h2>
+        <hr className="border-t border-black/20 mb-[3vw]" />
+        <div className="flex flex-wrap gap-4">
+          <Link
+            href="/#contact-form"
+            className="inline-flex items-center gap-3 text-[clamp(0.9rem,1.5vw,1.1rem)] font-bold uppercase tracking-widest text-black hover:opacity-70 transition-opacity"
+          >
+            <span className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-black">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </span>
+            Get In Touch
+          </Link>
+          <Link
+            href="/portfolio"
+            className="inline-flex items-center gap-3 text-[clamp(0.9rem,1.5vw,1.1rem)] font-bold uppercase tracking-widest text-black hover:opacity-70 transition-opacity"
+          >
+            <span className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-black">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </span>
+            View Projects
+          </Link>
+        </div>
+      </section>
+
       <Footer />
     </div>
   )

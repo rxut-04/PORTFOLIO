@@ -1,182 +1,82 @@
 "use client"
 
-import { useState } from "react"
-import { ArrowRight, Menu, X, Home } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
 
 const BuildProjectHero = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
   return (
-    <div className="relative min-h-screen overflow-hidden bg-black">
-      {/* Gradient background with grain effect */}
-      <div className="flex flex-col items-end absolute -right-60 -top-10 blur-xl z-0 ">
-        <div className="h-[10rem] rounded-full w-[60rem] z-1 bg-gradient-to-b blur-[6rem] from-purple-600 to-sky-600"></div>
-        <div className="h-[10rem] rounded-full w-[90rem] z-1 bg-gradient-to-b blur-[6rem] from-pink-900 to-yellow-400"></div>
-        <div className="h-[10rem] rounded-full w-[60rem] z-1 bg-gradient-to-b blur-[6rem] from-yellow-600 to-sky-500"></div>
-      </div>
-      <div className="absolute inset-0 z-0 bg-[url('/noise.png')] opacity-30"></div>
-
-      {/* Content container */}
-      <div className="relative z-10">
-        {/* Navigation */}
-        <nav className="container mx-auto flex items-center justify-between px-4 py-4 mt-6 relative z-20">
-          <div className="flex items-center gap-2">
-            <Link href="/" className="flex items-center">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black">
-                <span className="font-bold">&lt;/&gt;</span>
-              </div>
-              <span className="ml-2 text-lg md:text-xl font-bold text-white font-serif">CodeCraft Solutions</span>
-            </Link>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
-            <div className="flex items-center space-x-6">
-              <Link href="/" className="flex items-center text-sm text-gray-300 hover:text-white">
-                <Home className="h-4 w-4 mr-2" />
-                <span>Home</span>
-              </Link>
-              <NavItem label="Services" href="/services" hasDropdown />
-              <NavItem label="Portfolio" href="/portfolio" hasDropdown />
-              <NavItem label="About" href="/about" hasDropdown />
-              <NavItem label="Build Your Own Project" href="/build-project" />
-            </div>
-          </div>
-
-          {/* Mobile menu button */}
-          <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            <span className="sr-only">Toggle menu</span>
-            {mobileMenuOpen ? <X className="h-6 w-6 text-white" /> : <Menu className="h-6 w-6 text-white" />}
-          </button>
-        </nav>
-
-        {/* Mobile Navigation Menu with animation */}
-        <AnimatePresence>
-          {mobileMenuOpen && (
-            <motion.div
-              initial={{ y: "-100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "-100%" }}
-              transition={{ duration: 0.3 }}
-              className="fixed inset-0 z-50 flex flex-col p-4 bg-black/95 md:hidden"
-            >
-              <div className="flex items-center justify-between">
-                <div className="flex items-center">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black">
-                    <span className="font-bold">&lt;/&gt;</span>
-                  </div>
-                  <span className="ml-2 text-lg font-bold text-white font-serif">CodeCraft Solutions</span>
-                </div>
-                <button onClick={() => setMobileMenuOpen(false)}>
-                  <X className="h-6 w-6 text-white" />
-                </button>
-              </div>
-              <div className="mt-8 flex flex-col space-y-6">
-                <Link
-                  href="/"
-                  className="flex items-center justify-between border-b border-gray-800 pb-2 text-lg text-white"
-                >
-                  <span>Home</span>
-                  <ArrowRight className="h-4 w-4 text-gray-400" />
-                </Link>
-                <MobileNavItem label="Services" href="/services" />
-                <MobileNavItem label="Portfolio" href="/portfolio" />
-                <MobileNavItem label="About" href="/about" />
-                <MobileNavItem label="Build Your Own Project" href="/build-project" />
-                <Link
-                  href="/#contact-form"
-                  className="h-12 rounded-full bg-gradient-to-r from-purple-500 to-orange-500 px-8 text-base font-bold text-black hover:from-purple-600 hover:to-orange-600 flex items-center justify-center"
-                >
-                  Get Custom Quote
-                </Link>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        {/* Badge */}
-        <div className="mx-auto mt-6 flex max-w-fit items-center justify-center space-x-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm">
-          <span className="text-xs md:text-sm font-medium text-white">🎓 Your Project Journey Starts Here</span>
-        </div>
-
-        {/* Hero section */}
-        <div className="container mx-auto mt-8 md:mt-12 px-4 text-center">
-          <h1 className="mx-auto max-w-4xl text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white font-serif">
-            We Build Your{" "}
-            <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-orange-400 bg-clip-text text-transparent">
-              Final Year Project
-            </span>
-          </h1>
-          <p className="mx-auto mt-4 md:mt-6 max-w-2xl text-sm md:text-lg text-gray-300 leading-relaxed">
-            Our expert team handles every step of the development process with our{" "}
-            <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-orange-400 bg-clip-text text-transparent font-semibold">
-              10-Step Methodology
-            </span>{" "}
-            from concept to deployment. Get a professional project that impresses professors and future employers.
-          </p>
-          <div className="mt-8 md:mt-10 flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-            <button
-              onClick={() => {
-                const timelineSection = document.getElementById("project-timeline")
-                timelineSection?.scrollIntoView({ behavior: "smooth" })
-              }}
-              className="w-full sm:w-auto h-12 rounded-full bg-gradient-to-r from-purple-500 to-orange-500 px-6 md:px-8 text-sm md:text-base font-bold text-black hover:from-purple-600 hover:to-orange-600 flex items-center justify-center transition-all duration-300"
-            >
-              See Our Process
-            </button>
-            <Link
-              href="/portfolio"
-              className="w-full sm:w-auto h-12 rounded-full border border-gray-600 px-6 md:px-8 text-sm md:text-base font-bold text-white hover:bg-white/10 flex items-center justify-center"
-            >
-              View Our Work
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function NavItem({
-  label,
-  href,
-  hasDropdown,
-}: {
-  label: string
-  href: string
-  hasDropdown?: boolean
-}) {
-  return (
-    <Link href={href} className="flex items-center text-sm text-gray-300 hover:text-white">
-      <span>{label}</span>
-      {hasDropdown && (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="ml-1"
+    <section
+      className="px-[4vw] pt-[clamp(2rem,8vw,4vw)] pb-[4vw] min-h-screen flex flex-col justify-between"
+      style={{ backgroundColor: "#C3E41D", color: "#000" }}
+    >
+      {/* Nav */}
+      <nav className="flex items-center justify-between mb-[4vw]">
+        <Link
+          href="/"
+          className="text-xs font-bold uppercase tracking-[0.2em] opacity-50 hover:opacity-100 transition-opacity"
         >
-          <path d="m6 9 6 6 6-6" />
-        </svg>
-      )}
-    </Link>
-  )
-}
+          ← Back Home
+        </Link>
+        <span
+          className="text-2xl font-bold"
+          style={{ fontFamily: "'Brush Script MT', cursive" }}
+        >
+          O
+        </span>
+      </nav>
 
-function MobileNavItem({ label, href }: { label: string; href: string }) {
-  return (
-    <Link href={href} className="flex items-center justify-between border-b border-gray-800 pb-2 text-lg text-white">
-      <span>{label}</span>
-      <ArrowRight className="h-4 w-4 text-gray-400" />
-    </Link>
+      <p className="text-xs font-bold uppercase tracking-[0.2em] opacity-50 mb-[2vw]">
+        Build Project
+      </p>
+      <hr className="border-t border-black/20 mb-[3vw]" />
+
+      <div className="flex-1 flex flex-col justify-center">
+        <h1
+          className="text-[clamp(3.5rem,12vw,14rem)] font-bold leading-[0.85] uppercase tracking-tight mb-[3vw]"
+          style={{ fontFamily: "'Fira Code', monospace" }}
+        >
+          We Build
+          <br />
+          Your
+          <br />
+          Project.
+        </h1>
+      </div>
+
+      <hr className="border-t border-black/20 mb-[3vw]" />
+
+      <div className="flex flex-col lg:flex-row justify-between gap-[4vw]">
+        <p className="text-[clamp(1rem,2.5vw,1.5rem)] leading-relaxed max-w-[45ch] opacity-70">
+          Our expert team handles every step — from concept to deployment — using a proven
+          10-step methodology. Get a professional project that impresses professors and future employers.
+        </p>
+        <div className="flex flex-wrap gap-4">
+          <button
+            onClick={() => {
+              document.getElementById("project-timeline")?.scrollIntoView({ behavior: "smooth" })
+            }}
+            className="inline-flex items-center gap-3 text-[clamp(0.9rem,1.5vw,1.1rem)] font-bold uppercase tracking-widest text-black hover:opacity-60 transition-opacity"
+          >
+            <span className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-black">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </span>
+            See Our Process
+          </button>
+          <Link
+            href="/portfolio"
+            className="inline-flex items-center gap-3 text-[clamp(0.9rem,1.5vw,1.1rem)] font-bold uppercase tracking-widest text-black hover:opacity-60 transition-opacity"
+          >
+            <span className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-black">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </span>
+            View Our Work
+          </Link>
+        </div>
+      </div>
+    </section>
   )
 }
 
