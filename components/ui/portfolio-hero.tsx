@@ -296,7 +296,7 @@ export default function PortfolioHero() {
               className="text-[11px] sm:text-[13px] text-center text-neutral-600 dark:text-neutral-600"
               style={{ fontFamily: "'Antic', sans-serif" }}
             >
-              Om Raut · Developer Portfolio
+              Om Raut · rxut · CodeCraft Solutions · Developer Portfolio
             </p>
           </div>
         </div>

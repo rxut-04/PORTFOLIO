@@ -4,21 +4,44 @@ import { cinzel } from "./fonts"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Om Raut – Frontend Developer & Designer Portfolio",
+  title: "Om Raut – Frontend Developer & Designer Portfolio | CodeCraft Solutions",
   description:
-    "Om Raut is a frontend web developer and designer. Explore the official developer portfolio of Om Raut – projects, skills, and contact.",
+    "Official portfolio of Om Raut (rxut) — full-stack developer and designer behind CodeCraft Solutions. Explore projects, skills, and get in touch. Also known as Raut Om.",
   keywords: [
+    // Name variations
+    "Om Raut",
+    "Raut Om",
+    "om raut",
+    "raut om",
+    "Om",
+    "Raut",
+    "rxut",
+    "rxut-04",
+    // Developer keywords
     "Om Raut developer",
     "Om Raut web developer",
     "Om Raut frontend developer",
+    "Om Raut full stack developer",
     "Om Raut portfolio",
     "Om Raut developer portfolio",
     "Om Raut designer",
     "Om Raut React developer",
     "Om Raut Next.js developer",
+    // Raut variations
     "Raut portfolio",
     "Raut developer portfolio",
     "Raut web developer",
+    "Raut developer",
+    // CodeCraft
+    "CodeCraft Solutions",
+    "Code Craft Solutions",
+    "CodeCraft Solutions developer",
+    "CodeCraft Solutions portfolio",
+    "CodeCraft Solutions Om Raut",
+    // rxut
+    "rxut developer",
+    "rxut portfolio",
+    "rxut github",
   ],
   authors: [{ name: "Om Raut" }],
   creator: "Om Raut",
@@ -27,19 +50,19 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Om Raut | Portfolio",
+    title: "Om Raut | Portfolio – CodeCraft Solutions",
     description:
-      "Official portfolio of Om Raut – web developer and designer. Explore projects, skills, and get in touch.",
+      "Official portfolio of Om Raut (rxut) — full-stack developer and designer behind CodeCraft Solutions. Explore projects, skills, and get in touch.",
     url: "https://rauttportfoliio.netlify.app",
-    siteName: "Om Raut Portfolio",
+    siteName: "Om Raut Portfolio | CodeCraft Solutions",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Om Raut | Portfolio",
+    title: "Om Raut | Portfolio – CodeCraft Solutions",
     description:
-      "Official portfolio of Om Raut – web developer and designer.",
+      "Official portfolio of Om Raut (rxut) — full-stack developer and designer behind CodeCraft Solutions.",
     creator: "@omraut",
   },
   robots: {

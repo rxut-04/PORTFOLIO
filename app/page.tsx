@@ -9,12 +9,17 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Om Raut",
+  alternateName: ["Raut Om", "rxut", "rxut-04", "CodeCraft Solutions"],
   url: "https://rauttportfoliio.netlify.app",
-  sameAs: [],
-  jobTitle: "Frontend Web Developer & Designer",
+  sameAs: ["https://github.com/rxut-04"],
+  jobTitle: "Full-Stack Developer & Designer",
   description:
-    "Om Raut is a frontend web developer and designer specializing in React and Next.js. This is the official developer portfolio of Om Raut.",
-  knowsAbout: ["Web Development", "Frontend Development", "React", "Next.js", "UI Design"],
+    "Om Raut (also known as Raut Om, rxut, rxut-04) is a full-stack developer and designer behind CodeCraft Solutions. Official developer portfolio showcasing projects and skills.",
+  knowsAbout: ["Web Development", "Frontend Development", "React", "Next.js", "UI Design", "Full Stack Development"],
+  brand: {
+    "@type": "Brand",
+    name: "CodeCraft Solutions",
+  },
 }
 
 export default function Home() {
