@@ -77,7 +77,7 @@ const projects = [
     num: "08",
     title: "Library Audit — RFID System",
     description: "RFID-powered library auditing system. Tap, track, and audit physical books in real time — with a live dashboard, scan & sync, and login portal for administrators.",
-    image: "/library-audit.png",
+    image: "/library.png",
     tech: ["React", "RFID", "Node.js", "Dashboard"],
     liveUrl: "https://library-auditing.netlify.app/",
     bg: "#0a0a0a",

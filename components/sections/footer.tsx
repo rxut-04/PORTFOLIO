@@ -22,46 +22,31 @@ export function Footer() {
   ]
 
   return (
-    <footer
-      className="w-full px-[4vw] pt-[clamp(2rem,8vw,4vw)] pb-[4vw]"
-      style={{ backgroundColor: "#0a0a0a", color: "#fff" }}
-    >
-      {/* Top rule */}
-      <hr className="border-t border-white/10 mb-[4vw]" />
+    <footer className="w-full px-4 sm:px-6 md:px-[4vw] pt-12 md:pt-[clamp(2rem,8vw,4vw)] pb-8 md:pb-[4vw]" style={{ backgroundColor: "#0a0a0a", color: "#fff" }}>
+      <hr className="border-t border-white/10 mb-10 md:mb-[4vw]" />
 
       {/* Main grid */}
-      <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-[6vw] mb-[4vw]">
+      <div className="flex flex-col gap-10 md:gap-12 mb-10 md:mb-[4vw]">
 
-        {/* Left — Brand */}
-        <div className="flex-1 max-w-sm">
-          <p
-            className="text-[clamp(3rem,8vw,7rem)] font-bold leading-[0.85] uppercase tracking-tight mb-6"
-            style={{ fontFamily: "'Fira Code', monospace", color: "#C3E41D" }}
-          >
-            Om
-            <br />
-            Raut
+        {/* Brand */}
+        <div>
+          <p className="text-[clamp(3rem,10vw,7rem)] font-bold leading-[0.85] uppercase tracking-tight mb-4" style={{ fontFamily: "'Fira Code', monospace", color: "#C3E41D" }}>
+            Om<br />Raut
           </p>
-          <p className="text-[clamp(0.85rem,1.3vw,1rem)] leading-relaxed text-white/50 max-w-[30ch]">
+          <p className="text-sm md:text-base leading-relaxed text-white/50 max-w-xs">
             Full-stack developer & designer crafting fast, beautiful, and functional web experiences.
           </p>
         </div>
 
-        {/* Right — Links + Contact */}
-        <div className="flex flex-col sm:flex-row gap-12 lg:gap-[6vw]">
-
+        {/* Links row */}
+        <div className="flex flex-col sm:flex-row gap-10 sm:gap-16">
           {/* Nav */}
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/30 mb-4">
-              Navigation
-            </p>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/30 mb-4">Navigation</p>
             <ul className="space-y-3">
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-[clamp(0.85rem,1.3vw,1rem)] text-white/60 hover:text-[#C3E41D] transition-colors duration-300 uppercase tracking-wide font-medium"
-                  >
+                  <Link href={link.href} className="text-sm md:text-base text-white/60 hover:text-[#C3E41D] transition-colors duration-300 uppercase tracking-wide font-medium">
                     {link.name}
                   </Link>
                 </li>
@@ -71,34 +56,26 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/30 mb-4">
-              Contact
-            </p>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/30 mb-4">Contact</p>
             <ul className="space-y-3">
               <li>
-                <a
-                  href="tel:+917020706900"
-                  className="text-[clamp(0.85rem,1.3vw,1rem)] text-white/60 hover:text-[#C3E41D] transition-colors duration-300"
-                >
+                <a href="tel:+917020706900" className="text-sm md:text-base text-white/60 hover:text-[#C3E41D] transition-colors duration-300">
                   +91 7020706900
                 </a>
               </li>
               <li>
-                <a
-                  href="mailto:omraut.dev@gmail.com"
-                  className="text-[clamp(0.85rem,1.3vw,1rem)] text-white/60 hover:text-[#C3E41D] transition-colors duration-300"
-                >
+                <a href="mailto:omraut.dev@gmail.com" className="text-sm md:text-base text-white/60 hover:text-[#C3E41D] transition-colors duration-300 break-all">
                   omraut.dev@gmail.com
                 </a>
               </li>
-              <li>
+              <li className="pt-1">
                 <a
                   href="https://wa.me/917020706900?text=Hi Om! I'd like to discuss a project."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[clamp(0.85rem,1.3vw,1rem)] font-bold uppercase tracking-widest text-[#C3E41D] hover:text-white transition-colors duration-300 mt-2"
+                  className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-[#C3E41D] hover:text-white transition-colors duration-300"
                 >
-                  <span className="flex items-center justify-center w-8 h-8 rounded-full border border-[#C3E41D]">
+                  <span className="flex items-center justify-center w-8 h-8 rounded-full border border-[#C3E41D] flex-shrink-0">
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
@@ -108,17 +85,14 @@ export function Footer() {
               </li>
             </ul>
           </div>
-
         </div>
       </div>
 
-      <hr className="border-t border-white/10 mb-[3vw]" />
+      <hr className="border-t border-white/10 mb-6" />
 
       {/* Bottom bar */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-
-        {/* Social icons */}
-        <div className="flex items-center gap-4">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div className="flex items-center gap-3 flex-wrap">
           {socialLinks.map((social) => (
             <a
               key={social.label}
@@ -132,12 +106,9 @@ export function Footer() {
             </a>
           ))}
         </div>
-
-        {/* Copyright */}
-        <p className="text-xs uppercase tracking-[0.2em] text-white/30">
-          © {currentYear} Om Raut · Raut Portfolio · Made with code
+        <p className="text-xs uppercase tracking-[0.15em] text-white/30">
+          © {currentYear} Om Raut · Made with code
         </p>
-
       </div>
     </footer>
   )

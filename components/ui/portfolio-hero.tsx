@@ -302,16 +302,16 @@ export default function PortfolioHero() {
         </div>
 
         {/* About Me + Projects Buttons */}
-        <div className="absolute bottom-16 sm:bottom-20 md:bottom-24 lg:bottom-28 left-1/2 -translate-x-1/2 flex items-center gap-3">
+        <div className="absolute bottom-16 sm:bottom-20 md:bottom-24 lg:bottom-28 left-1/2 -translate-x-1/2 flex flex-wrap items-center justify-center gap-2 sm:gap-3 w-full px-4">
           <Link
             href="/about"
-            className="px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-purple-500 to-orange-500 text-white rounded-full hover:from-purple-600 hover:to-orange-600 transition-all duration-300 text-sm md:text-base font-medium inline-flex items-center gap-2 shadow-lg hover:shadow-xl"
+            className="px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 bg-gradient-to-r from-purple-500 to-orange-500 text-white rounded-full hover:from-purple-600 hover:to-orange-600 transition-all duration-300 text-sm md:text-base font-medium inline-flex items-center gap-2 shadow-lg hover:shadow-xl whitespace-nowrap"
           >
             About Me
           </Link>
           <Link
             href="/portfolio"
-            className="px-6 md:px-8 py-3 md:py-4 rounded-full border-2 border-[#C3E41D] text-[#C3E41D] hover:bg-[#C3E41D] hover:text-black transition-all duration-300 text-sm md:text-base font-medium inline-flex items-center gap-2 shadow-lg hover:shadow-xl"
+            className="px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-full border-2 border-[#C3E41D] text-[#C3E41D] hover:bg-[#C3E41D] hover:text-black transition-all duration-300 text-sm md:text-base font-medium inline-flex items-center gap-2 shadow-lg hover:shadow-xl whitespace-nowrap"
           >
             Projects
           </Link>

@@ -9,7 +9,7 @@ export default function AboutPage() {
     <div style={{ backgroundColor: "#0a0a0a", color: "#fff" }} className="min-h-screen">
 
       {/* ── Nav ── */}
-      <nav className="flex items-center justify-between px-[4vw] py-6">
+      <nav className="flex items-center justify-between px-4 sm:px-6 md:px-[4vw] py-6">
         <Link
           href="/"
           className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 hover:text-[#C3E41D] transition-colors duration-300"
@@ -25,7 +25,7 @@ export default function AboutPage() {
       </nav>
 
       {/* ── Hero ── */}
-      <section className="px-[4vw] pt-[clamp(2rem,6vw,4rem)] pb-[4vw]">
+      <section className="px-4 sm:px-6 md:px-[4vw] pt-8 md:pt-[clamp(2rem,6vw,4rem)] pb-8 md:pb-[4vw]">
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mb-[2vw]">
           01 — About Me
         </p>
@@ -44,7 +44,7 @@ export default function AboutPage() {
 
         <hr className="border-t border-white/10 mb-[3vw]" />
 
-        <div className="flex flex-col lg:flex-row gap-[4vw] max-w-5xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-[4vw] max-w-5xl">
           <p className="text-[clamp(1rem,2.5vw,1.5rem)] font-normal leading-relaxed text-white/70 max-w-[50ch]">
             I'm a full-stack developer and designer based in India. I build fast, beautiful, and
             functional web experiences — from pixel-perfect UIs to robust backend systems.
@@ -58,7 +58,7 @@ export default function AboutPage() {
         <hr className="border-t border-white/10 mt-[3vw] mb-[3vw]" />
 
         {/* Stats */}
-        <div className="flex flex-wrap gap-[4vw]">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 md:gap-[4vw]">
           {[
             { num: "6+", label: "Projects Shipped" },
             { num: "3+", label: "Years Building" },
@@ -81,13 +81,12 @@ export default function AboutPage() {
       </section>
 
       {/* ── Skills ── */}
-      <section className="px-[4vw] py-[4vw]" style={{ backgroundColor: "#111" }}>
-        <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mb-[2vw]">
+      <section className="px-4 sm:px-6 md:px-[4vw] py-10 md:py-[4vw]" style={{ backgroundColor: "#111" }}>
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mb-4 md:mb-[2vw]">
           02 — Skills & Stack
         </p>
-        <hr className="border-t border-white/10 mb-[3vw]" />
-
-        <div className="flex flex-wrap gap-[3vw]">
+        <hr className="border-t border-white/10 mb-6 md:mb-[3vw]" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-[3vw]">
           {[
             { cat: "Frontend", items: "React · Next.js · TypeScript · Tailwind CSS · Framer Motion · GSAP" },
             { cat: "Backend", items: "Node.js · Express · REST APIs · WebSockets" },
@@ -96,11 +95,11 @@ export default function AboutPage() {
             { cat: "Mobile", items: "React Native" },
             { cat: "Data Viz", items: "D3.js · Recharts" },
           ].map((s) => (
-            <div key={s.cat} className="min-w-[200px] flex-1">
+            <div key={s.cat} className="">
               <p className="text-xs font-bold uppercase tracking-[0.2em] mb-2" style={{ color: "#C3E41D" }}>
                 {s.cat}
               </p>
-              <p className="text-[clamp(0.85rem,1.3vw,1rem)] text-white/60 leading-relaxed">
+              <p className="text-sm md:text-[clamp(0.85rem,1.3vw,1rem)] text-white/60 leading-relaxed">
                 {s.items}
               </p>
             </div>
@@ -109,7 +108,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Inspirations / Book Slider ── */}
-      <section className="px-[4vw] py-[4vw]">
+      <section className="px-4 sm:px-6 md:px-[4vw] py-10 md:py-[4vw]">
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mb-[2vw]">
           03 — My Inspirations
         </p>
