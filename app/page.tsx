@@ -14,8 +14,14 @@ const jsonLd = {
   sameAs: ["https://github.com/rxut-04"],
   jobTitle: "Full-Stack Developer & Designer",
   description:
-    "Om Raut (also known as Raut Om, rxut, rxut-04) is a full-stack developer and designer behind CodeCraft Solutions. Official developer portfolio showcasing projects and skills.",
+    "Om Raut (also known as Raut Om, rxut, rxut-04) is a full-stack developer and designer from Nashik, Maharashtra, India — behind CodeCraft Solutions.",
   knowsAbout: ["Web Development", "Frontend Development", "React", "Next.js", "UI Design", "Full Stack Development"],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Nashik",
+    addressRegion: "Maharashtra",
+    addressCountry: "IN",
+  },
   brand: {
     "@type": "Brand",
     name: "CodeCraft Solutions",
